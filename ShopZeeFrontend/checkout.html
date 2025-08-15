@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout - ShopZee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/checkout.css" />
+</head>
+<body>
+  <h1>Checkout</h1>
+  <div id="checkoutSummary"></div>
+  <div id="couponSection">
+    <input type="checkbox" name="couponApply" id="couponApply"> Got a coupon code? 
+    <div id="applyCoupon" style="display:none; margin-top: 10px;">
+      <h3>Apply it here</h3>
+      <input type="text" name="couponCode" id="couponCode">
+      <button type="button" id="couponBtn">Apply</button>
+      <button type="button" id="removeCouponBtn" style="display:none;">Remove Coupon</button>
+    </div>
+  </div>
+  <form id="checkoutForm">
+  <h2>Shipping Information</h2>
+
+  <label>
+    Full Name:&nbsp;
+    <input type="text" id="fullName" required />
+  </label>
+
+  <label>
+    Address:&nbsp;
+    <textarea id="address" required></textarea>
+  </label>
+
+  <label>
+    Phone Number:&nbsp;
+    <input type="tel" id="phone" required pattern="[0-9]{10}" />
+  </label>
+
+  <label>
+    Email:&nbsp;
+    <input type="email" id="email" required />
+  </label>
+
+ <h3>Payment Method</h3>
+<div class="payment-options">
+    <label>
+        <input type="radio" name="paymentMethod" value="COD" checked> Cash on Delivery
+    </label><br>
+    <label>
+        <input type="radio" name="paymentMethod" value="Card"> Credit/Debit Card
+    </label>
+    <label>
+        <input type="radio" name="paymentMethod" value="UPI"> UPI
+    </label>
+</div>
+
+<!-- Hidden Card Details Form -->
+<div id="cardDetails" style="display: none; margin-top: 15px;">
+    <h4>Enter Card Details</h4>
+    <form id="cardForm">
+      <div class="form-group">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+          </div>
+
+          <div class="form-group">
+            <label for="expiry">Expiry Date:</label>
+            <input type="month" id="expiry" name="expiry" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" name="cvv" placeholder="123" maxlength="3" required>
+          </div>
+    </form>
+  </div>
+
+  <div id="upiDetails" style="display: none; margin-top: 10px;">
+    <input type="text" id="upiDetails" placeholder="Enter your UPI ID">
+</div>
+  <button type="submit" id="confirmBtn" disabled>Confirm Payment</button>
+</form>
+  <div id="orderStatus" style="margin-top:20px; font-weight:bold;"></div>
+
+  <script src="./js/checkout.js"></script>
+</body>
+</html>

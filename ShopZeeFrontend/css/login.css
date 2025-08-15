@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+  background-image: url("https://img.freepik.com/premium-photo/abstract-design-elementannual-saleshopping-season-conceptmini-cart-with-colorful-paper-bag-white-wooden-table-backgroundtop-viewflat-lay_1040174-5645.jpg");
+  font-family: "Baloo Bhai 2", sans-serif;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+.login-container{
+    background-color: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label{
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 20px;
+
+}
+
+input{
+    display: inline-block;
+    width: 65%;
+    padding: 8px 0px;
+    margin-bottom:20px;
+    font-size: 1rem;
+    font-family: "Baloo Bhai 2", sans-serif;
+    border:none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+
+button{
+    width:48%;
+    padding: 10px 8px;
+    background-color: lightgreen;
+    border:none;
+    color: #000;
+    border-radius: 5px;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.forgotPassword > button{
+    width: 100%;
+    cursor: pointer;
+}

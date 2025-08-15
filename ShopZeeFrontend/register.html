@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopZee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/register.js" defer></script>
+</head>
+<body>
+    <div class="register-container">
+        
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="userId">UserId: </label>
+            <input type="text" name="userId" id="userId" readonly></input>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name = "username" placeholder="Enter a name" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter a password" required><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="dummy@xyz.com" required><br>
+            <label for="phonenumber">Contact: </label>
+            <input type="text" name="phonenumber" id="phonenumber" placeholder="9876543210" required><br>
+            <div class="forgotPassword">
+                <button type="submit"> Register</button>
+            </div>
+        </form>
+        <div class="login-message"></div>
+    </div>
+</body>
+</html>

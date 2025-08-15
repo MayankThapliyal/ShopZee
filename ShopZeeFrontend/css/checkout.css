@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baloo Bhai 2', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.checkout-container {
+  max-width: 400px;       /* narrower container like login */
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Order summary table stays full width and styled as before */
+#checkoutSummary {
+  margin-bottom: 30px;
+}
+
+#checkoutSummary table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#checkoutSummary th,
+#checkoutSummary td {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+#checkoutSummary th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+#checkoutSummary tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Form styling similar to login form - vertical stacked */
+#checkoutForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* consistent spacing */
+}
+
+#checkoutForm label {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#checkoutForm input,
+#checkoutForm select,
+#checkoutForm textarea {
+  padding: 10px 12px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+#checkoutForm input:focus,
+#checkoutForm select:focus,
+#checkoutForm textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.payment-options{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.payment-options label {
+    display: flex;
+    align-items: center; /* aligns label text with its radio button */
+    gap: 5px; /* space between button & text */
+    margin: 0; /* remove extra label margin */
+    cursor: pointer;
+}
+
+.payment-options input[type="radio"] {
+    margin: 0; /* remove extra margin around radio button */
+    vertical-align: middle;
+}
+
+input#upiDetails , #couponCode{
+  padding: 10px 12px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+input#upiDetails:focus, #couponCode{
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Submit button like login */
+#confirmBtn:hover {
+  background-color: #388e3c;
+}
+
+#confirmBtn, #couponBtn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top:5px;
+    transition: background-color 0.3s ease;
+}
+
+#removeCouponBtn{
+  margin-left: 8px;
+  background-color: #ff0a0a;
+  color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top:5px;
+
+}
+
+#confirmBtn:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
