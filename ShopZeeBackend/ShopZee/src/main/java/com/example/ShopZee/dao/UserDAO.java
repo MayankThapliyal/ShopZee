@@ -16,6 +16,7 @@ public interface UserDAO  extends JpaRepository<UserEntity, Integer>{
 	Optional<UserEntity> findByEmail(String email);
 	Optional<UserEntity> findByUsernameAndPassword(String username, String password);
 	Optional<UserEntity> findByUserId(int userId);
+
 	
 	  @Query("SELECT MAX(u.userId) FROM UserEntity u")
 	    Integer findMaxUserId();

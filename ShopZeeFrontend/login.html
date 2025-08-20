@@ -24,10 +24,15 @@
             <button type="button" onclick="window.open('register.html','_blank')"> Register</button>
             </div>
             <div class="forgotPassword">
-                <button type="button">Forgot Password</button>
+                <button type="button" onclick="redirectToForgotPasssword()">Forgot Password</button>
             </div>
         </form>
         <div class="login-message"></div>
     </div>
+    <script>
+        function redirectToForgotPasssword(){
+            window.location.href="forgotPassword.html";
+        }
+    </script>
 </body>
 </html>

@@ -8,12 +8,14 @@ import org.springframework.stereotype.Service;
 import com.example.ShopZee.bean.UserBean;
 import com.example.ShopZee.dao.UserDAO;
 import com.example.ShopZee.entity.UserEntity;
-
 @Service
 public class UserServiceImpl implements UserService{
 	
 	@Autowired
 	private UserDAO userDao;
+	
+//	@Autowired
+//	private UserEntity userEntity;
 
 	@Override
 	public boolean registerUser(UserEntity userEntity) {
@@ -48,5 +50,16 @@ public class UserServiceImpl implements UserService{
         Integer maxId = userDao.findMaxUserId();
         return maxId != null ? maxId : 1000;  // Default start if none present
     }
-
+	
+	@Override
+	public boolean resetPassword(String username,String password) {
+		Optional<UserEntity> userOpt = userDao.findByUsername(username);
+		if(userOpt.isPresent()) {
+			UserEntity user = userOpt.get();
+			user.setPassword(password);
+			userDao.save(user);
+			return true;
+		}
+		return false;
+	}
 }

@@ -11,6 +11,7 @@ public interface UserService {
 	UserBean loginUser(String username, String password);
 	UserBean getUserById(int userId);
 	int getMaxUserId();
-	
+	boolean resetPassword(String username, String newPassword);
+
 }
 

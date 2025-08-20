@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.example.ShopZee.bean.PasswordResetRequest;
 import com.example.ShopZee.bean.UserBean;
 //import com.example.ShopZee.dao.UserDAO;
 import com.example.ShopZee.entity.UserEntity;
@@ -46,4 +47,16 @@ public class User {
 			return ResponseEntity.notFound().build();
 		}
 	}
+	
+	@PostMapping("/forgot-password")
+	public ResponseEntity<String> forgotPassword(@RequestBody PasswordResetRequest request){
+		boolean updated = userService.resetPassword(request.getUsername(), request.getNewPassword());
+		if(updated) {
+			return ResponseEntity.ok("Password updated successfully!");
+		}
+		else {
+			return ResponseEntity.badRequest().body("Username not found!");
+		}
+	}
+	
 }	
