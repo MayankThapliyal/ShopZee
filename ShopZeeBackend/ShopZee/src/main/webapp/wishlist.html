@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Wishlist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="./css/cart.css" /> <!-- reuse styles -->
+    <style>
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="head">ShopZee... A one-stop shop for all your needs!!!</h2>
+    <nav class="navBar">
+        <ul class="nav-links">
+            <div class="profile-dropdown">
+                <span id="profileName">Profile ▾</span>
+                <div class="dropdown-content" id="profileDropdown">
+                    <a href="myaccount.html" id="myAccountLink">My Account</a>
+                    <a href="#" id="logoutBtn">Logout</a>
+                </div>
+            </div>
+            <li><a href="./homepage.html">Home</a></li>
+            <li><a href="./cart.html">Cart</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Your Wishlist</h1>
+    </header>
+    <main>
+        <h2 id="wishlistHeading">Current items in your wishlist</h2>
+        <div class="product-grid" id="wishlistGrid"></div>
+        <p class="empty-message" id="emptyWishlistMessage" style="display:none">
+            Your wishlist is empty. Add some products!
+        </p>
+    </main>
+    <script src="./js/wishlist.js"></script>
+    <script src="./js/profile.js"></script>
+</body>
+
+</html>

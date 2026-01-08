@@ -26,15 +26,36 @@ public class UserServiceImpl implements UserService{
 		return true;
 	}
 
+//	@Override
+//	public UserBean loginUser(String username, String password) {
+//		Optional<UserEntity> userOpt = userDao.findByUsernameAndPassword(username, password);
+//		if(userOpt.isPresent()) {
+//			UserEntity userEn = userOpt.get();
+//			return new UserBean(userEn.getUserId(), userEn.getUsername(), userEn.getPassword(), userEn.getEmail(), userEn.getPhonenumber());
+//		}
+//		return null;
+//	}
+	
 	@Override
 	public UserBean loginUser(String username, String password) {
-		Optional<UserEntity> userOpt = userDao.findByUsernameAndPassword(username, password);
-		if(userOpt.isPresent()) {
-			UserEntity userEn = userOpt.get();
-			return new UserBean(userEn.getUserId(), userEn.getUsername(), userEn.getPassword(), userEn.getEmail(), userEn.getPhonenumber());
-		}
-		return null;
+	    Optional<UserEntity> userOpt = userDao.findByUsername(username);
+
+	    if (userOpt.isPresent()) {
+	        UserEntity user = userOpt.get();
+
+	        if (user.getPassword().equals(password)) {
+	            return new UserBean(
+	                user.getUserId(),
+	                user.getUsername(),
+	                user.getPassword(),
+	                user.getEmail(),
+	                user.getPhonenumber()
+	            );
+	        }
+	    }
+	    return null;
 	}
+
 
 	@Override
 	public UserBean getUserById(int userId) {

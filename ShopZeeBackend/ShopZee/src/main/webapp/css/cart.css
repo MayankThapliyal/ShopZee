@@ -1,0 +1,67 @@
+header,
+#cartHeading {
+    margin-left: 1%;
+    ;
+}
+
+.empty-message {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+    color: gray;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 15px;
+}
+
+.product-card {
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quantity-control button{
+    font-size: 20px !important;
+    padding: 2px 8px !important ;
+}
+
+#totalAmount{
+    margin-right:1%;
+    margin-top:2%;
+}
+
+#emptyCartBtn{
+    background-color: crimson;
+    border:none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.remove-item {
+    width: 100% !important;
+}
+
+#proceedToPayBtn{
+    background-color: rgb(63, 63, 241);
+    color: white;
+    border:none;
+    border-radius: 5px;
+}
+
+#proceedToPayBtn:hover{
+    background-color: rgb(34, 34, 142);
+}

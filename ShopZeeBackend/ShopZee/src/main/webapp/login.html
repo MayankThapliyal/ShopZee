@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopZee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/login.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name = "username" placeholder="Enter your name" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required><br>
+            <div class="buttons">
+            <button type="submit" id="loginBtn">Log In</button>
+            <button type="button" onclick="window.open('register.html','_blank')"> Register</button>
+            </div>
+            <div class="forgotPassword">
+                <button type="button" onclick="redirectToForgotPasssword()">Forgot Password</button>
+            </div>
+        </form>
+        <div class="login-message"></div>
+    </div>
+    <script>
+        function redirectToForgotPasssword(){
+            window.location.href="forgotPassword.html";
+        }
+    </script>
+</body>
+</html>
